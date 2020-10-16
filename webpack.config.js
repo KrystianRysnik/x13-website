@@ -19,14 +19,14 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageMinPlugin = require('imagemin-webpack-plugin').default;
 
 let targetServerConfiguration = serverConfiguration.internal;
 
-const config = function(env, args) {
+const config = function (env, args) {
   if (args.externalServer !== undefined && args.externalServer) {
     targetServerConfiguration = serverConfiguration.external;
   }
@@ -43,7 +43,13 @@ const config = function(env, args) {
       rules: [
         {
           test: /\.scss$/,
-          use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+          use: [
+            'style-loader',
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            'postcss-loader',
+            'sass-loader',
+          ],
         },
         {
           test: /\.js$/,
@@ -55,7 +61,11 @@ const config = function(env, args) {
           use: [
             {
               loader: 'url-loader',
-              options: { name: 'images/design/[name].[hash:6].[ext]', publicPath: '../', limit: 8192 },
+              options: {
+                name: 'images/design/[name].[hash:6].[ext]',
+                publicPath: '../',
+                limit: 8192,
+              },
             },
           ],
         },
@@ -64,7 +74,11 @@ const config = function(env, args) {
           use: [
             {
               loader: 'url-loader',
-              options: { name: 'fonts/[name].[hash:6].[ext]', publicPath: '../', limit: 8192 },
+              options: {
+                name: 'fonts/[name].[hash:6].[ext]',
+                publicPath: '../',
+                limit: 8192,
+              },
             },
           ],
         },
@@ -109,7 +123,7 @@ const config = function(env, args) {
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
-      new ImageMinPlugin({ test: /\.(jpg|jpeg|png|gif|svg)$/i }),
+      new ImageMinPlugin({test: /\.(jpg|jpeg|png|gif|svg)$/i}),
       new CleanWebpackPlugin({
         /**
          * Some plugins used do not correctly save to webpack's asset list.
