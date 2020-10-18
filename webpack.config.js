@@ -23,6 +23,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageMinPlugin = require('imagemin-webpack-plugin').default;
+const webpack = require('webpack');
 
 let targetServerConfiguration = serverConfiguration.internal;
 
@@ -140,6 +141,10 @@ const config = function (env, args) {
             toType: 'dir',
           },
         ],
+      }),
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
       }),
     ],
   };
