@@ -10,6 +10,10 @@ $('#myTab a').on('click', (e) => {
   $(this).tab('show');
 });
 
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+
 function start_count() {
   $('.numbers__counter').each(function() {
     $(this)

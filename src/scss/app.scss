@@ -31,6 +31,16 @@
 @import '~bootstrap/scss/bootstrap';
 
 @media (max-width: 991px) {
+  .nav {
+    &__modal {
+      display: block !important;
+    }
+
+    &__dropdown {
+      display: none !important;
+    }
+  }
+
   .heading {
     min-width: 200px;
 
@@ -100,15 +110,94 @@ section:nth-child(even) {
   background-repeat: no-repeat;
 }
 
-nav .nav-link {
-  display: block;
-  line-height: 48px;
-  padding: 0 30px !important;
+.nav {
+  &-link {
+    display: block;
+    line-height: 48px;
+    padding: 0 30px !important;
 
-  &:hover {
-    @include linear-gradient(90deg, rgb(29, 98, 240),rgb(26, 214, 253));
-    border-radius: 24px;
-    color: rgb(255,255,255) !important;
+    &:hover {
+      @include linear-gradient(90deg, rgb(29, 98, 240), rgb(26, 214, 253));
+      border-radius: 24px;
+      color: rgb(255, 255, 255) !important;
+    }
+  }
+
+  &__modal {
+    display: none;
+  }
+
+  &__dropdown {
+    display: block;
+    height: 64px;
+
+    &.show {
+      &::after {
+        display: block;
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+      }
+    }
+  }
+
+  &__dropdown-button {
+    padding: 0 30px;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: rgb(255, 255, 255);
+    color: rgb(93, 103, 106);
+
+    &::after {
+      display: none;
+    }
+
+    &[aria-expanded='true'] {
+      background: rgb(243, 243, 243);
+      outline: 0 !important;
+    }
+  }
+
+  &__dropdown-body {
+    margin-top: 0;
+    border: 0;
+    padding: 16px;
+    background: rgb(243, 243, 243);
+  }
+
+  &__dropdown-label {
+    font-size: 14px;
+  }
+
+  &__dropdown-input {
+    width: 240px;
+    padding: 6px;
+    border: 0;
+    background: rgb(255, 255, 255);
+  }
+
+  &__dropdown-submit {
+    @include linear-gradient(90deg, rgb(29, 98, 240), rgb(26, 214, 253));
+
+    display: block;
+    width: 80%;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 40px;
+    color: rgb(255, 255, 255) !important;
+    border: 0;
+    border-radius: 22px;
+
+    &:hover {
+      color: rgb(255, 255, 255);
+      text-decoration: underline;
+    }
   }
 }
 
@@ -446,5 +535,87 @@ nav .nav-link {
 
   &__copyright {
     background: rgb(255, 255, 255);
+  }
+}
+
+.login {
+  &__label {
+    font-size: 14px;
+  }
+
+  &__input {
+    width: 240px;
+    padding: 6px;
+    border: 0;
+    background: rgb(243, 243, 243);
+  }
+
+  &__submit {
+    @include linear-gradient(90deg, rgb(29, 98, 240), rgb(26, 214, 253));
+
+    display: block;
+    width: 80%;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 40px;
+    color: rgb(255, 255, 255) !important;
+    border: 0;
+    border-radius: 22px;
+
+    &:hover {
+      color: rgb(255, 255, 255);
+      text-decoration: underline;
+    }
+  }
+}
+
+.modal {
+  .row:nth-child(even):not(:last-child) {
+    background: rgb(243, 243, 243);
+  }
+
+  &__img {
+    width: 70px;
+    margin-right: 10px;
+  }
+
+  &__producer {
+    margin: 0;
+  }
+
+  &__product-name {
+    font-size: 1.2rem;
+  }
+
+  &__price-discount {
+    margin: 10px 0 0 0;
+    text-decoration: line-through;
+    line-height: 1.1;
+  }
+
+  &__price-now {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: rgb(255, 114, 0);
+    line-height: 1.1;
+  }
+
+  &__footer {
+    position: relative;
+
+    &::after {
+      display: block;
+      content: '';
+      width: 120px;
+      max-width: 50%;
+      height: 4px;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      border-radius: 2px;
+      transform:translateX(-50%);
+      @include linear-gradient(90deg, rgb(255, 177, 0), rgb(255, 114, 0));
+    }
   }
 }
