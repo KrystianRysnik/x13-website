@@ -22,5 +22,9 @@
 /* Browser specific styles */
 @import 'dirty/hacks';
 
+/* Font Awesome */
+@import './font-awesome/fontawesome';
+@import './font-awesome/brands';
+
 /* Bootstrap */
 @import '~bootstrap/scss/bootstrap';
