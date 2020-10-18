@@ -141,7 +141,7 @@ nav .nav-link {
     content: '';
     width: 100%;
     height: 2px;
-    @include linear-gradient(90deg, rgb(29, 98, 240),rgb(26, 214, 253));
+    @include linear-gradient(90deg, rgb(29, 98, 240), rgb(26, 214, 253));
     position: absolute;
     left: 0;
     top: 10px;
@@ -150,7 +150,7 @@ nav .nav-link {
 }
 
 .pricing {
-  @include linear-gradient(90deg, rgb(29, 98, 240),rgb(26, 214, 253));
+  @include linear-gradient(90deg, rgb(29, 98, 240), rgb(26, 214, 253));
 
   &__paragraph {
     margin: 0;
@@ -176,7 +176,7 @@ nav .nav-link {
 
 .about {
   &__card {
-    @include linear-gradient(90deg, rgb(29, 98, 240),rgb(26, 214, 253));
+    @include linear-gradient(90deg, rgb(29, 98, 240), rgb(26, 214, 253));
     border: none;
 
     &:hover {
@@ -192,7 +192,7 @@ nav .nav-link {
   }
 
   &__card-body {
-    background: rgb(255,255,255);
+    background: rgb(255, 255, 255);
     margin-bottom: 2px;
   }
 
@@ -225,7 +225,7 @@ nav .nav-link {
   }
 
   &__card-body {
-    @include linear-gradient(90deg, rgb(29, 98, 240),rgb(26, 214, 253));
+    @include linear-gradient(90deg, rgb(29, 98, 240), rgb(26, 214, 253));
     padding: 0 0 2px 0;
   }
 
@@ -242,7 +242,7 @@ nav .nav-link {
   }
 
   &__nav-item {
-    @include linear-gradient(90deg, rgb(29, 98, 240),rgb(26, 214, 253));
+    @include linear-gradient(90deg, rgb(29, 98, 240), rgb(26, 214, 253));
     border: none;
     height: 100%;
     padding: 0;
@@ -259,14 +259,14 @@ nav .nav-link {
       color: rgb(16, 36, 43);
       height: 100%;
       width: 100%;
-      background: rgb(255,255,255);
+      background: rgb(255, 255, 255);
       margin-bottom: 2px;
       border-radius: 0;
     }
   }
 
   &__button {
-    @include linear-gradient(90deg, rgb(29, 98, 240),rgb(26, 214, 253));
+    @include linear-gradient(90deg, rgb(29, 98, 240), rgb(26, 214, 253));
     display: inline-block;
     font-weight: bold;
     margin: 0 auto;
@@ -367,7 +367,7 @@ nav .nav-link {
       content: '"';
       width: 40px;
       height: 40px;
-      color: rgb(255,255,255);
+      color: rgb(255, 255, 255);
       line-height: 66px;
       text-align: center;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -383,7 +383,7 @@ nav .nav-link {
 }
 
 .footer {
-  @include linear-gradient(90deg, rgb(29, 98, 240),rgb(26, 214, 253));
+  @include linear-gradient(90deg, rgb(29, 98, 240), rgb(26, 214, 253));
   color: rgb(93, 103, 106);
 
   a {
@@ -436,7 +436,7 @@ nav .nav-link {
       content: '';
       width: 100%;
       height: 2px;
-      @include linear-gradient(90deg, rgb(29, 98, 240),rgb(26, 214, 253));
+      @include linear-gradient(90deg, rgb(29, 98, 240), rgb(26, 214, 253));
       position: absolute;
       left: 0;
       top: 20px;
