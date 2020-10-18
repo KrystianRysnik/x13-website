@@ -73,14 +73,6 @@
   background: linear-gradient($direction, $color-stops);
 }
 
-@mixin white-gradient {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -116,7 +108,7 @@ section:nth-child(even) {
     line-height: 48px;
     padding: 0 30px !important;
 
-    &:hover {
+    &:hover:not(.offer__nav-link) {
       @include linear-gradient(90deg, rgb(29, 98, 240), rgb(26, 214, 253));
       border-radius: 24px;
       color: rgb(255, 255, 255) !important;
@@ -337,6 +329,10 @@ section:nth-child(even) {
     padding: 0;
   }
 
+  &__img {
+    margin: 8px;
+  }
+
   &__nav-link {
     color: rgb(93, 103, 106);
     width: 100%;
@@ -352,6 +348,10 @@ section:nth-child(even) {
       margin-bottom: 2px;
       border-radius: 0;
     }
+  }
+
+  &__header {
+    color: rgb(93, 103, 106);
   }
 
   &__button {
@@ -381,7 +381,11 @@ section:nth-child(even) {
 
     &::before,
     &::after {
-      @include white-gradient;
+      @include linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0)
+      );
       content: '';
       height: 100px;
       position: absolute;
@@ -614,7 +618,7 @@ section:nth-child(even) {
       bottom: -10px;
       left: 50%;
       border-radius: 2px;
-      transform:translateX(-50%);
+      transform: translateX(-50%);
       @include linear-gradient(90deg, rgb(255, 177, 0), rgb(255, 114, 0));
     }
   }
