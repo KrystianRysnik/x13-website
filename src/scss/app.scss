@@ -30,6 +30,30 @@
 /* Bootstrap */
 @import '~bootstrap/scss/bootstrap';
 
+@media (max-width: 991px) {
+  .heading {
+    min-width: 200px;
+
+    &--small {
+      font-size: 0.8rem !important;
+    }
+
+    &--big {
+      font-size: 2.2rem !important;
+    }
+  }
+
+  .offer {
+    &__img {
+      width: 60px;
+    }
+
+    &__header {
+      font-size: 18px;
+    }
+  }
+}
+
 @mixin linear-gradient($direction, $color-stops...) {
   background: nth(nth($color-stops, 1), 1);
   background: -webkit-linear-gradient(
