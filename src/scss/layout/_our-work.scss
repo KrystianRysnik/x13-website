@@ -31,3 +31,12 @@
     background: $white;
   }
 }
+
+@media (min-width: 768px) {
+  .our-work {
+    background: url('../images/content/liss.jpg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 50% auto;
+  }
+}
