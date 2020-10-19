@@ -27,15 +27,15 @@
 /* Browser specific styles */
 @import 'dirty/hacks';
 
-/* Bootstrap */
+/* Imports */
 @import '~bootstrap/scss/bootstrap';
+@import '~slick-carousel/slick/slick';
 
 /* Layout */
 @import 'layout/pricing';
 @import 'layout/about';
 @import 'layout/our-work';
 @import 'layout/offer';
-@import 'layout/partners';
 @import 'layout/numbers';
 @import 'layout/opinion';
 @import 'layout/footer';
