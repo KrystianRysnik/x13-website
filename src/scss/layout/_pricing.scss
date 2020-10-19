@@ -1,0 +1,24 @@
+.pricing {
+  @include linear-gradient(90deg, $blue-dark-color, $blue-light-color);
+
+  &__paragraph {
+    margin: 0;
+    color: $white;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  &__button {
+    margin: 0 16px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: $white;
+    color: $font-grey-color;
+
+    &:hover {
+      @include linear-gradient(90deg, $orange-light-color, $orange-dark-color);
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.login {
+  &__label {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  &__input {
+    width: 240px;
+    padding: 6px;
+    border: 0;
+    background: $light-grey;
+  }
+
+  &__submit {
+    @include linear-gradient(90deg, $blue-dark-color, $blue-light-color);
+
+    display: block;
+    width: 80%;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 40px;
+    color: $white !important;
+    border: 0;
+    border-radius: 22px;
+
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}

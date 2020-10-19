@@ -1,0 +1,50 @@
+.modal {
+  .row:nth-child(even):not(:last-child) {
+    background: $light-grey;
+  }
+
+  &__img {
+    width: 70px;
+    margin-right: 10px;
+  }
+
+  &__producer {
+    margin: 0;
+  }
+
+  &__product-name {
+    font-size: 1.2rem;
+  }
+
+  &__price-discount {
+    margin: 10px 0 0 0;
+    text-decoration: line-through;
+    line-height: 1.1;
+  }
+
+  &__price-now {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: $orange-dark-color;
+    line-height: 1.1;
+  }
+
+  &__footer {
+    position: relative;
+
+    &::after {
+      display: block;
+      content: '';
+      width: 120px;
+      max-width: 50%;
+      height: 4px;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      border-radius: 2px;
+      transform: translateX(-50%);
+      @include linear-gradient(90deg, $orange-light-color, $orange-dark-color);
+    }
+  }
+}

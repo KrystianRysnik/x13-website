@@ -1,0 +1,27 @@
+.opinion {
+  &__card {
+    position: relative;
+
+    &::after {
+      display: block;
+      content: '"';
+      width: 40px;
+      height: 40px;
+      color: $white;
+      line-height: 66px;
+      text-align: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 56px;
+      background: $font-blue-color;
+      border-radius: 100%;
+      position: absolute;
+      transform: rotateZ(10deg);
+      top: 30px;
+      left: -20px;
+    }
+  }
+
+  &__name {
+    color: $font-dark-color;
+  }
+}

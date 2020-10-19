@@ -1,0 +1,46 @@
+.partners {
+  &__slider {
+    background: white;
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &::before,
+    &::after {
+      @include linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0)
+      );
+      content: '';
+      height: 100px;
+      position: absolute;
+      width: 200px;
+      z-index: 2;
+    }
+
+    &::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+
+    &::before {
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+
+  &__slide {
+    height: 100px;
+    width: 250px;
+  }
+}

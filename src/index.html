@@ -42,20 +42,22 @@
             <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Logowanie</a>
           </li>
         </ul>
-        <div class="dropdown nav__dropdown">
+        <div class="dropdown nav__dropdown" id="dropdownLogin">
           <button class="nav__dropdown-button dropdown-toggle" type="button" id="dropdownMenuButton"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Logowanie
           </button>
           <div class="nav__dropdown-body dropdown-menu dropdown-menu-right rounded-0 border-0 mt-0"
             aria-labelledby="dropdownMenuButton">
-            <label class="nav__dropdown-label mt-4" for="login">Login</label>
-            <input class="nav__dropdown-input" type="text" id="login" name="login" placeholder="twoj@mail.pl" />
-
-            <label class="nav__dropdown-label mt-4" for="password">Hasło</label>
-            <input class="nav__dropdown-input" type="password" id="password" name="password" placeholder="******" />
-
-            <input class="nav__dropdown-submit shadow mx-auto mt-4" type="submit" value="Zaloguj się" />
+            <div class="modal-body d-flex flex-column align-items-center">
+              <label class="login__label mt-4" for="dropdownLogin">Login</label>
+              <input class="login__input" type="text" id="dropdownLogin" name="dropdownLogin" placeholder="twoj@mail.pl" />
+    
+              <label class="login__label mt-4" for="dropdownPassword">Hasło</label>
+              <input class="login__input" type="password" id="dropdownPassword" name="dropdownPassword" placeholder="******" />
+    
+              <input class="login__submit shadow mt-4" type="submit" value="Zaloguj się" />
+            </div>
           </div>
         </div>
       </div>
@@ -154,8 +156,8 @@
               <div class="card mb-4 shadow border-0">
                 <div class="our-work__card-header card-header" id="headingOne">
                   <h3 class="mb-0 font-weight-bold">
-                    <button class="our-work__button btn text-left" type="button" data-toggle="collapse" data-target="#collapseOne"
-                      aria-expanded="true" aria-controls="collapseOne">
+                    <button class="our-work__button btn text-left" type="button" data-toggle="collapse"
+                      data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       Poznanie potrzeb klienta
                     </button>
                   </h3>
@@ -425,7 +427,7 @@
                     <img class="rounded-circle" src="images/content/clients/jan.jpg" alt="Jan Nowak" />
                   </div>
                   <div class="col d-flex justify-content-end align-items-center">
-                    <p class="text-right"><strong>Jan Nowak</strong> <br /><small>Osoba prywatna</small></p>
+                    <p class="opinion__name text-right"><strong>Jan Nowak</strong> <br /><small>Osoba prywatna</small></p>
                   </div>
                 </div>
               </div>
@@ -446,7 +448,7 @@
                     <img class="rounded-circle" src="images/content/clients/kasia.jpg" alt="Kasia Kowalska" />
                   </div>
                   <div class="col d-flex justify-content-end align-items-center">
-                    <p class="text-right"><strong>Kasia Kowalska</strong> <br /><small>Prezes Firma sp z.o.o</small></p>
+                    <p class="opinion__name text-right"><strong>Kasia Kowalska</strong> <br /><small>Prezes Firma sp z.o.o</small></p>
                   </div>
                 </div>
               </div>
@@ -467,7 +469,7 @@
                     <img class="rounded-circle" src="images/content/clients/michal.jpg" alt="Michał Kowal" />
                   </div>
                   <div class="col d-flex justify-content-end align-items-center">
-                    <p class="text-right"><strong>Michał Kowal</strong> <br /><small>P.W. Cośtam</small></p>
+                    <p class="opinion__name text-right"><strong>Michał Kowal</strong> <br /><small>P.W. Cośtam</small></p>
                   </div>
                 </div>
               </div>
@@ -543,7 +545,7 @@
           <input class="login__input" type="text" id="login" name="login" placeholder="twoj@mail.pl" />
 
           <label class="login__label mt-4" for="password">Hasło</label>
-          <input class="login__input" type="password" id="password" name="password" palceholder="******" />
+          <input class="login__input" type="password" id="password" name="password" placeholder="******" />
 
           <input class="login__submit shadow mt-4" type="submit" value="Zaloguj się" />
         </div>
@@ -637,6 +639,8 @@
       </div>
     </div>
   </div>
+
+  <div class="overlay"></div>
 </body>
 
 </html>

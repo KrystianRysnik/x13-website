@@ -1,0 +1,33 @@
+.our-work {
+  counter-reset: number;
+
+  &__card-header {
+    background: $white;
+    border-bottom: 0;
+  }
+
+  &__button {
+    padding: 6px;
+    color: $font-dark-color;
+    font-weight: 600;
+    counter-increment: number;
+
+    &::before {
+      padding-right: 12px;
+      display: inline-block;
+      content: '0' counter(number);
+      color: $font-blue-color;
+    }
+  }
+
+  &__card-body {
+    @include linear-gradient(90deg, $blue-dark-color, $blue-light-color);
+    padding: 0 0 2px 0;
+  }
+
+  &__paragraph {
+    margin: 0;
+    padding: 0 26px 20px 26px;
+    background: $white;
+  }
+}

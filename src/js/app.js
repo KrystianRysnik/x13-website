@@ -5,14 +5,14 @@ import 'bootstrap';
 // import 'bootstrap/js/dist/util';
 // import 'bootstrap/js/dist/dropdown';
 
-$('#myTab a').on('click', (e) => {
-  e.preventDefault();
-  $(this).tab('show');
+$('#dropdownLogin').on('show.bs.dropdown', function () {
+  $('.overlay').addClass('show');
 });
 
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
+$('#dropdownLogin').on('hide.bs.dropdown', function () {
+  $('.overlay').removeClass('show');
+});
+
 
 function start_count() {
   $('.numbers__counter').each(function() {

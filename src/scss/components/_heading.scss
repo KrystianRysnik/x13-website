@@ -1,0 +1,50 @@
+.heading {
+  display: inline-block;
+  margin: 20px;
+  padding-top: 10px;
+  position: relative;
+  overflow: hidden;
+  line-height: 1.4;
+
+  &--small {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+    white-space: nowrap;
+    color: $font-blue-color;
+
+    &::after {
+      margin-left: 8px;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      content: '';
+      height: 1px;
+      @include linear-gradient(90deg, $blue-dark-color, $blue-light-color);
+    }
+  }
+
+  &--big {
+    display: block;
+    color: $font-heading-color;
+    font-size: 3.8rem;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 991px) {
+  .heading {
+    min-width: 200px;
+
+    &--small {
+      font-size: 0.8rem !important;
+    }
+
+    &--big {
+      font-size: 2.2rem !important;
+    }
+  }
+}

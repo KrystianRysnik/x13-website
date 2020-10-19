@@ -1,0 +1,33 @@
+.about {
+  &__card {
+    @include linear-gradient(90deg, $blue-dark-color, $blue-light-color);
+    border: none;
+
+    &:hover {
+      .about__card-body {
+        background: transparent;
+        color: $white;
+      }
+
+      .about__img {
+        filter: grayscale(100%) brightness(200%) contrast(1000%);
+      }
+
+      .about__header {
+        color: $white;
+      }
+    }
+  }
+
+  &__card-body {
+    background: $white;
+    margin-bottom: 2px;
+  }
+
+  &__header {
+    padding-top: 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $font-grey-color;
+  }
+}

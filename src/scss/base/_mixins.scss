@@ -16,15 +16,20 @@
 // Media queries
 @mixin bp($point) {
   @if $point == large {
-    @media (min-width: 1280px) { @content; }
+    @media (min-width: 1280px) {
+      @content;
+    }
   } @else if $point == small {
-    @media (max-width: 1279px) { @content; }
+    @media (max-width: 1279px) {
+      @content;
+    }
   }
 }
 
 // Text selection
 @mixin text-selection($color-selection, $color-selection-bg) {
-  ::-moz-selection { // sass-lint:disable-line no-vendor-prefixes
+  ::-moz-selection {
+    // sass-lint:disable-line no-vendor-prefixes
     background: $color-selection-bg;
     color: $color-selection;
     text-shadow: none;
@@ -42,8 +47,34 @@
 //@include placeholder;
 @mixin placeholder {
   // sass-lint:disable no-vendor-prefixes
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(
+    legacy-direction($direction),
+    $color-stops
+  );
+  background: linear-gradient($direction, $color-stops);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 5));
+  }
 }

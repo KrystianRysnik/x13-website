@@ -9,6 +9,7 @@
 /* Colour palette */
 $black: #000;
 $white: #fff;
+$light-grey: #f3f3f3;
 
 $body-background-color: #333;
 $foreground-color: #fff;
@@ -16,4 +17,22 @@ $caption-color: #464646;
 $accent-color: #999;
 $link-color: #ec1f4e;
 
+$orange-dark-color: #ff7200;
+$orange-light-color: #ffb100;
+
+$blue-dark-color: #1d62f0;
+$blue-light-color: #1ad6fd;
+
+$font-dark-color: #10242b;
+$font-heading-color: #434B4E;
+$font-grey-color: #5d676a;
+$font-blue-color: #1baaf8;
+
 /* Components */
+
+/* Bootstrap override */
+$body-color: #5d676a;
+
+$font-family-sans-serif: 'Poppins', -apple-system, system-ui, BlinkMacSystemFont,
+  'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
