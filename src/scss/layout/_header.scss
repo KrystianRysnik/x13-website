@@ -1,0 +1,15 @@
+.header {
+  min-height: 320px;
+
+  &__carousel,
+  &__carousel-inner,
+  &__carousel-item {
+    min-height: 320px;
+  }
+
+  &__carousel-img {
+    min-height: 320px;
+    width: 100%;
+    object-fit: cover;
+  }
+}

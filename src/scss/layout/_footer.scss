@@ -41,6 +41,8 @@
   }
 
   &__header {
+    @extend .mt-3;
+    @extend .mt-md-0;
     display: flex;
     flex-direction: row;
     align-items: center;
