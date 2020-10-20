@@ -8,23 +8,30 @@
 <link rel="icon" href="favicon.ico"><link href="css/app.css" rel="stylesheet"></head>
 
 <body>
-  <header class="h-75 header">
-    <div class="container py-5 h-100 d-flex align-items-end">
-      <div class="bg-white">
-        <h1 class="heading">
-          <span class="heading--small">Profesjonalnie przygotowana </span><span class="heading--big">Wentylacja</span>
-        </h1>
+  <header class="header">
+    <div id="carouselExampleSlidesOnly" class="header__carousel carousel slide" data-ride="carousel">
+      <div class="header__carousel-inner carousel-inner">
+        <div class="header__carousel-item carousel-item active">
+          <img class="header__carousel-img d-block w-100" src="images/content/header.png"
+            alt="Profesjonalnie przygotowana wentylacja">
+          <div class="carousel-caption container text-left">
+            <h1 class="heading bg-white">
+              <span class="heading--small">Profesjonalnie przygotowana </span>
+              <span class="heading--big">Wentylacja</span>
+            </h1>
+          </div>
+        </div>
       </div>
     </div>
   </header>
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white py-0">
+  <nav class="nav navbar navbar-expand-lg navbar-light fixed-top bg-white">
     <div class="container">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto py-2">
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Klimatyzacja <span
                 class="sr-only">(current)</span></a>
@@ -42,20 +49,24 @@
             <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Logowanie</a>
           </li>
         </ul>
-        <div class="dropdown nav__dropdown">
+        <div class="dropdown nav__dropdown" id="dropdownLogin">
           <button class="nav__dropdown-button dropdown-toggle" type="button" id="dropdownMenuButton"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Logowanie
           </button>
           <div class="nav__dropdown-body dropdown-menu dropdown-menu-right rounded-0 border-0 mt-0"
             aria-labelledby="dropdownMenuButton">
-            <label class="nav__dropdown-label mt-4" for="login">Login</label>
-            <input class="nav__dropdown-input" type="text" id="login" name="login" placeholder="twoj@mail.pl" />
+            <div class="modal-body d-flex flex-column align-items-center">
+              <label class="login__label mt-4" for="dropdownLogin">Login</label>
+              <input class="login__input" type="text" id="dropdownLogin" name="dropdownLogin"
+                placeholder="twoj@mail.pl" />
 
-            <label class="nav__dropdown-label mt-4" for="password">Hasło</label>
-            <input class="nav__dropdown-input" type="password" id="password" name="password" placeholder="******" />
+              <label class="login__label mt-4" for="dropdownPassword">Hasło</label>
+              <input class="login__input" type="password" id="dropdownPassword" name="dropdownPassword"
+                placeholder="******" />
 
-            <input class="nav__dropdown-submit shadow mx-auto mt-4" type="submit" value="Zaloguj się" />
+              <input class="login__submit shadow mt-4" type="submit" value="Zaloguj się" />
+            </div>
           </div>
         </div>
       </div>
@@ -63,22 +74,22 @@
   </nav>
   <main>
     <section class="pricing">
-      <div class="container py-4">
+      <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-5 d-sm-flex align-items-center">
-            <p class="pricing__paragraph text-center text-sm-left my-2">Umów się na <br /><strong>bezpłatną
+            <p class="pricing__paragraph text-center text-sm-left">Umów się na <br /><strong>bezpłatną
                 wycenę</strong></p>
           </div>
           <div class="col-xs-12 col-sm-7 text-center text-sm-right">
-            <a href="#" class="pricing__button pricing__button--gradient shadow my-2">+48 <strong>100 200
+            <a href="#" class="pricing__button pricing__button--gradient shadow">+48 <strong>100 200
                 300</strong></a>
-            <a href="#" class="pricing__button shadow my-2"><strong>napisz</strong> wiadomośc email</a>
+            <a href="#" class="pricing__button shadow"><strong>napisz</strong> wiadomośc email</a>
           </div>
         </div>
       </div>
     </section>
     <section class="about">
-      <div class="container py-4">
+      <div class="container">
         <div class="row">
           <div class="col">
             <h2 class="heading">
@@ -87,7 +98,7 @@
           </div>
         </div>
         <div class="row text-center">
-          <div class="col-xs-12 col-sm-6 col-md-4  my-3">
+          <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="about__card card shadow rounded-0">
               <div class="about__card-body card-body">
                 <img class="about__img mx-auto" src="images/content/klimatyzacja.png" alt="Klimatyzacja" />
@@ -95,7 +106,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 my-3">
+          <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="about__card card shadow rounded-0">
               <div class="about__card-body card-body">
                 <img class="about__img mx-auto" src="images/content/wentylacja.png" alt="Wentylacja" />
@@ -103,7 +114,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 my-3">
+          <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="about__card card shadow rounded-0">
               <div class="about__card-body card-body">
                 <img class="about__img mx-auto" src="images/content/projektowanie.png" alt="Projektowanie" />
@@ -112,7 +123,7 @@
             </div>
           </div>
           <div class="w-100 d-sm-none"></div>
-          <div class="col-xs-12 col-sm-6 col-md-4 my-3">
+          <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="about__card card shadow rounded-0">
               <div class="about__card-body card-body">
                 <img class="about__img mx-auto" src="images/content/produkcja.png" alt="Produkcja" />
@@ -120,7 +131,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 my-3">
+          <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="about__card card shadow rounded-0">
               <div class="about__card-body card-body">
                 <img class="about__img mx-auto" src="images/content/montaz.png" alt="Montaż" />
@@ -128,7 +139,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-4 my-3">
+          <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="about__card card shadow rounded-0">
               <div class="about__card-body card-body">
                 <img class="about__img mx-auto" src="images/content/serwis.png" alt="Serwis" />
@@ -149,18 +160,17 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-5 pb-4">
+          <div class="col-md-6 pb-4">
             <div class="accordion" id="accordionExample">
-              <div class="card mb-4 shadow border-0">
+              <div class="our-work__card card shadow border-0">
                 <div class="our-work__card-header card-header" id="headingOne">
                   <h3 class="mb-0 font-weight-bold">
-                    <button class="our-work__button btn text-left" type="button" data-toggle="collapse" data-target="#collapseOne"
-                      aria-expanded="true" aria-controls="collapseOne">
+                    <button class="our-work__button btn text-left" type="button" data-toggle="collapse"
+                      data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       Poznanie potrzeb klienta
                     </button>
                   </h3>
                 </div>
-
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                   data-parent="#accordionExample">
                   <div class="our-work__card-body card-body">
@@ -171,7 +181,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card mb-4 shadow border-0">
+              <div class="our-work__card card shadow border-0">
                 <div class="our-work__card-header card-header" id="headingTwo">
                   <h3 class="mb-0 font-weight-bold">
                     <button class="our-work__button btn text-left collapsed" type="button" data-toggle="collapse"
@@ -189,7 +199,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card mb-4 shadow border-0">
+              <div class="our-work__card card shadow border-0">
                 <div class="our-work__card-header card-header" id="headingThree">
                   <h3 class="mb-0 font-weight-bold">
                     <button class="our-work__button btn text-left collapsed" type="button" data-toggle="collapse"
@@ -207,7 +217,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card mb-4 shadow border-0">
+              <div class="our-work__card card shadow border-0">
                 <div class="our-work__card-header card-header" id="headingThree">
                   <h3 class="mb-0 font-weight-bold">
                     <button class="our-work__button btn text-left collapsed" type="button" data-toggle="collapse"
@@ -228,14 +238,11 @@
               </div>
             </div>
           </div>
-          <div class="col-md-7 d-flex align-items-end">
-            <img src="./images/content/liss.jpg" alt="Jak działamy" />
-          </div>
         </div>
       </div>
     </section>
     <section class="offer">
-      <div class="container py-4">
+      <div class="container">
         <div class="row">
           <div class="col">
             <h2 class="heading">
@@ -263,7 +270,7 @@
                 </a>
               </li>
             </ul>
-            <div class="tab-content bg-white px-5 py-4" id="myTabContent">
+            <div class="offer__tab tab-content bg-white" id="myTabContent">
               <div class="tab-pane fade show active" id="air-conditioning" role="tabpanel"
                 aria-labelledby="air-conditioning-tab">
                 <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas diam vel
@@ -319,7 +326,7 @@
       </div>
     </section>
     <section class="partners">
-      <div class="container py-4">
+      <div class="container">
         <div class="row">
           <div class="col">
             <h2 class="heading">
@@ -331,41 +338,25 @@
         <div class="row">
           <div class="col">
             <div class="partners__slider">
-              <div class="partners__slide-track">
-                <div class="partners__slide">
-                  <img src="./images/content/partners/lg.jpg" alt="LG Logo" />
-                </div>
-                <div class="partners__slide">
-                  <img src="./images/content/partners/fujitsu.jpg" alt="Fujistu Logo" />
-                </div>
-                <div class="partners__slide">
-                  <img src="./images/content/partners/kaisai.jpg" alt="Kaisai Logo" />
-                </div>
-                <div class="partners__slide">
-                  <img src="./images/content/partners/mitsubishi.jpg" alt="Mitsubishi Logo" />
-                </div>
-                <div class="partners__slide">
-                  <img src="./images/content/partners/samsung.jpg" alt="Samsung Logo" />
-                </div>
-                <div class="partners__slide">
-                  <img src="./images/content/partners/lg.jpg" alt="LG Logo" />
-                </div>
-                <div class="partners__slide">
-                  <img src="./images/content/partners/fujitsu.jpg" alt="Fujistu Logo" />
-                </div>
-                <div class="partners__slide">
-                  <img src="./images/content/partners/kaisai.jpg" alt="Kaisai Logo" />
-                </div>
-                <div class="partners__slide">
-                  <img src="./images/content/partners/mitsubishi.jpg" alt="Mitsubishi Logo" />
-                </div>
-                <div class="partners__slide">
-                  <img src="./images/content/partners/samsung.jpg" alt="Samsung Logo" />
-                </div>
+              <div class="slide">
+                <img class="mx-auto" src="./images/content/partners/lg.jpg" alt="LG Logo" />
+              </div>
+              <div class="slide">
+                <img class="mx-auto" src="./images/content/partners/fujitsu.jpg" alt="Fujistu Logo" />
+              </div>
+              <div class="slide">
+                <img class="mx-auto" src="./images/content/partners/kaisai.jpg" alt="Kaisai Logo" />
+              </div>
+              <div class="slide">
+                <img class="mx-auto" src="./images/content/partners/mitsubishi.jpg" alt="Mitsubishi Logo" />
+              </div>
+              <div class="slide">
+                <img class="mx-auto" src="./images/content/partners/samsung.jpg" alt="Samsung Logo" />
               </div>
             </div>
           </div>
         </div>
+      </div>
     </section>
     <section class="numbers">
       <div class="container pt-4">
@@ -377,22 +368,22 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-3 my-3 my-5">
+          <div class="numbers__col col-xs-12 col-sm-6 col-md-3">
             <img class="mx-auto" src="images/content/realizacje.png" alt="Realizacje" />
             <h3 class="numbers__header"><span class="numbers__counter">497</span> <span
                 class="numbers__header--small">realizacji</span></h3>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-3 my-5">
+          <div class="numbers__col col-xs-12 col-sm-6 col-md-3">
             <img class="mx-auto" src="images/content/monterzy.png" alt="Monterzy" />
-            <h3 class="numbers__header"><span class="numbers__counter">35</span>+ <span
+            <h3 class="numbers__header"><span class="numbers__counter numbers__counter--plus">35</span> <span
                 class="numbers__header--small">monterów</span>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-3 my-5">
+          <div class="numbers__col col-xs-12 col-sm-6 col-md-3">
             <img class="mx-auto" src="images/content/miedz.png" alt="Miedź" />
-            <h3 class="numbers__header"><span class="numbers__counter">9570</span>+ <span
+            <h3 class="numbers__header"><span class="numbers__counter numbers__counter--plus">9570</span> <span
                 class="numbers__header--small">metrów miedzi</span></h3>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-3 my-5">
+          <div class="numbers__col col-xs-12 col-sm-6 col-md-3">
             <img class="mx-auto" src="images/content/klienci.png" alt="Klienci" />
             <h3 class="numbers__header"><span class="numbers__counter">65</span> <span
                 class="numbers__header--small">klientów w ubiegłym roku</span></h3>
@@ -401,7 +392,7 @@
       </div>
     </section>
     <section class="opinion">
-      <div class="container py-4">
+      <div class="container">
         <div class="row">
           <div class="col">
             <h2 class="heading">
@@ -410,8 +401,8 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-12 col-md-4 my-2">
-            <div class="opinion__card card shadow border-0 rounded-0 mx-3 mx-sm-0">
+          <div class="col-sm-12 col-md-4">
+            <div class="opinion__card card shadow border-0 rounded-0">
               <div class="card-body">
                 <div class="row">
                   <Div class="col">
@@ -425,14 +416,15 @@
                     <img class="rounded-circle" src="images/content/clients/jan.jpg" alt="Jan Nowak" />
                   </div>
                   <div class="col d-flex justify-content-end align-items-center">
-                    <p class="text-right"><strong>Jan Nowak</strong> <br /><small>Osoba prywatna</small></p>
+                    <p class="opinion__name text-right"><strong>Jan Nowak</strong> <br /><small>Osoba prywatna</small>
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-4 my-2">
-            <div class="opinion__card card shadow border-0 rounded-0 mx-3 mx-sm-0">
+          <div class="col-sm-12 col-md-4">
+            <div class="opinion__card card shadow border-0 rounded-0">
               <div class="card-body">
                 <div class="row">
                   <Div class="col">
@@ -446,14 +438,15 @@
                     <img class="rounded-circle" src="images/content/clients/kasia.jpg" alt="Kasia Kowalska" />
                   </div>
                   <div class="col d-flex justify-content-end align-items-center">
-                    <p class="text-right"><strong>Kasia Kowalska</strong> <br /><small>Prezes Firma sp z.o.o</small></p>
+                    <p class="opinion__name text-right"><strong>Kasia Kowalska</strong> <br /><small>Prezes Firma sp
+                        z.o.o</small></p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-4 my-2">
-            <div class="opinion__card card shadow border-0 rounded-0 mx-3 mx-sm-0">
+          <div class="col-sm-12 col-md-4">
+            <div class="opinion__card card shadow border-0 rounded-0">
               <div class="card-body">
                 <div class="row">
                   <Div class="col">
@@ -467,7 +460,8 @@
                     <img class="rounded-circle" src="images/content/clients/michal.jpg" alt="Michał Kowal" />
                   </div>
                   <div class="col d-flex justify-content-end align-items-center">
-                    <p class="text-right"><strong>Michał Kowal</strong> <br /><small>P.W. Cośtam</small></p>
+                    <p class="opinion__name text-right"><strong>Michał Kowal</strong> <br /><small>P.W. Cośtam</small>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -479,14 +473,12 @@
   <footer class="footer">
     <div class="footer__info">
       <div class="container">
-        <div class="row py-5">
+        <div class="row">
           <div class="col-sm-12 col-md-5 d-flex flex-column justify-content-end">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas diam vel augue convallis, et rhoncus
               mi venenatis. Donec ac ipsum interdum, pretium augue et, commodo felis. Praesent non </p>
-            <p class="h4"><strong>znajdziesz</strong> nas na: <span class="fa-stack fa-1x">
-                <i class="fas fa-circle fa-stack-2x" style="color:rgb(58,92,154);"></i>
-                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-              </span></p>
+            <p class="h4"><strong>znajdziesz</strong> nas na:
+              <a href="#"><img class="footer__social" src="images/content/facebook.svg" alt="Facebook" /></a>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-3">
             <h3 class="footer__header"><span class="footer__header--block">Linki</span></h3>
@@ -500,14 +492,14 @@
           <div class="d-none d-md-block col-md-1"></div>
           <div class="col-xs-12 col-sm-6 col-md-3">
             <h3 class="footer__header"><span class="footer__header--block">Kontakt</span></h3>
-            <ul class="d-flex flex-column">
-              <li class="my-2"><img class="float-left mr-2" src="images/content/call.png" alt="Telefon" /> <a
-                  href="tel:123123123"><strong>123
+            <ul class="footer__nav d-flex flex-column">
+              <li class="footer__item"><img class="float-left mr-2" src="images/content/call.png" alt="Telefon" />
+                <a href="tel:123123123"><strong>123
                     123 123</strong></a></li>
-              <li class="my-2"><img class="float-left mr-2" src="images/content/call.png" alt="Telefon" /> <a
-                  href="tel:500600700"><strong>500
+              <li class="footer__item"><img class="float-left mr-2" src="images/content/call.png" alt="Telefon" />
+                <a href="tel:500600700"><strong>500
                     600 700</strong></a></li>
-              <li class="my-2"><img class="float-left mr-2" src="images/content/mail.png" alt="Mail" />
+              <li class="footer__item"><img class="float-left mr-2" src="images/content/mail.png" alt="Mail" />
                 <a href="mailto:kontak@domena.pl">kontakt@domena.pl</a></li>
             </ul>
           </div>
@@ -516,12 +508,14 @@
     </div>
     <div class="footer__copyright">
       <div class="container">
-        <div class="row py-3">
+        <div class="row">
           <div class="col-xs-12 col-sm-6">
-            <p class="text-center text-sm-left my-0">copyright 2019 <strong>projekt</strong>.pl</p>
+            <p class="footer__copyright-paragraph text-center text-sm-left">copyright 2019 <strong>projekt</strong>.pl
+            </p>
           </div>
           <div class="col-xs-12 col-sm-6">
-            <p class="text-center text-sm-right my-0">projekt i wykonanie: <strong>XIR</strong>.pl</p>
+            <p class="footer__copyright-paragraph text-center text-sm-right">projekt i wykonanie:
+              <strong>XIR</strong>.pl</p>
           </div>
         </div>
       </div>
@@ -543,7 +537,7 @@
           <input class="login__input" type="text" id="login" name="login" placeholder="twoj@mail.pl" />
 
           <label class="login__label mt-4" for="password">Hasło</label>
-          <input class="login__input" type="password" id="password" name="password" palceholder="******" />
+          <input class="login__input" type="password" id="password" name="password" placeholder="******" />
 
           <input class="login__submit shadow mt-4" type="submit" value="Zaloguj się" />
         </div>
@@ -628,7 +622,7 @@
               <p class="modal__price-now text-right">1 999,99 zł</p>
             </div>
           </div>
-          <div class="row py-4">
+          <div class="row">
             <div class="col">
               <p class="modal__footer text-center">oraz <strong>1 000</strong> modeli na zamówienie</p>
             </div>
@@ -637,6 +631,8 @@
       </div>
     </div>
   </div>
+
+  <div class="overlay"></div>
 <script src="js/app.js"></script></body>
 
 </html>
