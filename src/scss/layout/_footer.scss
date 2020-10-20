@@ -30,33 +30,36 @@
     }
   }
 
+  &__item {
+    @extend .my-2;
+  }
+
   &__info {
+    @extend .py-5;
     background: $light-grey;
     margin-bottom: 1px;
   }
 
   &__header {
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
     &--block {
-      padding-right: 10px;
-      background: $light-grey;
-      color: $font-blue-color;
       font-size: 1.2rem;
-      position: relative;
-      z-index: 1;
+      font-weight: 600;
+      white-space: nowrap;
+      color: $font-blue-color;
     }
 
     &::after {
+      margin-left: 8px;
       display: block;
-      content: '';
       width: 100%;
+      max-width: 100%;
+      content: '';
       height: 1px;
       @include linear-gradient(90deg, $blue-dark-color, $blue-light-color);
-      position: absolute;
-      left: 0;
-      top: 20px;
-      z-index: 0;
     }
   }
 
@@ -71,6 +74,11 @@
   }
 
   &__copyright {
+    @extend .py-3;
     background: $white;
+  }
+
+  &__copyright-paragraph {
+    @extend .m-0;
   }
 }

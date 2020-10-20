@@ -1,4 +1,6 @@
 .nav {
+  @extend .py-0;
+
   &-link {
     display: block;
     line-height: 48px;

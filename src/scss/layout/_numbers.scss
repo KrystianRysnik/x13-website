@@ -1,4 +1,8 @@
 .numbers {
+  &__col {
+    @extend .mt-4;
+  }
+
   &__counter {
     font-weight: 600;
   }

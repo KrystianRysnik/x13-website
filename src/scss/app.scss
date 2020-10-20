@@ -47,3 +47,11 @@ section:nth-child(even) {
 strong {
   font-weight: 600;
 }
+
+section .container {
+  @extend .py-4;
+}
+
+section .heading {
+  padding-left: 0px;
+}

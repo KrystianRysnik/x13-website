@@ -2,14 +2,14 @@
   @include linear-gradient(90deg, $blue-dark-color, $blue-light-color);
 
   &__paragraph {
-    margin: 0;
+    margin: 8px 0px;
     color: $white;
     font-size: 1.2rem;
     line-height: 1.2;
   }
 
   &__button {
-    margin: 0 16px;
+    margin: 8px 16px;
     display: inline-block;
     padding: 10px 20px;
     background: $white;

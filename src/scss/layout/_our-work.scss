@@ -1,6 +1,10 @@
 .our-work {
   counter-reset: number;
 
+  &__card:not(:last-child) {
+    @extend .mb-5;
+  }
+
   &__card-header {
     background: $white;
     border-bottom: 0;

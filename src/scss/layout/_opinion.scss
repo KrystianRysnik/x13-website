@@ -1,5 +1,8 @@
 .opinion {
   &__card {
+    @extend .mx-3;
+    @extend .mx-sm-0;
+    @extend .my-2;
     position: relative;
 
     &::after {
